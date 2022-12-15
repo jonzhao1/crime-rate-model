@@ -1,4 +1,4 @@
-# Loop through entire Amazon S3 bucket and get descriptive statistics for all CSV files
+# Loop through entire Amazon S3 bucket and get descriptive statistics for every CSV object (also works for every CSV object in folders)
 
 import boto3
 import pandas as pd
