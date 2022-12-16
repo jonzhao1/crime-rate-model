@@ -1,4 +1,6 @@
-## DataCommons-Python_API
+## Crime Model
+Data collected through the [Data Commons Python API](https://docs.datacommons.org/api/python/) for all 50 states in the United States about the population, median
+age, and total crimes for every year from 2011 to 2019. This dataset is used for a logistic regression model that predicts whether the crime rate for a given year and state will be greater or less than the national average crime rate for that given year. 
 
 
 Data about demographics, crime rates, income, rent prices, etc. were extracted from the Data Commons Python API. This dataset along with others I collected were used 
