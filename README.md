@@ -1,4 +1,4 @@
-#### DataCommons-Python_API
+### DataCommons-Python_API
 Data about demographics, crime rates, income, rent prices, etc. were extracted from the Data Commons Python API. This dataset along with others I collected were used 
 to predict crime rates based on the relationship between median income and median rent prices. All the datasets were put into an Amazon S3 bucket. More information 
 about how to use the API can be found here: https://docs.datacommons.org/api/python/. 
