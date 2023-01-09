@@ -19,9 +19,6 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Crime Rate Prediction</h1>
@@ -80,13 +77,13 @@
 								<span class="image main"><img src="images/lr_data.png" alt="" /> <strong><figcaption style="text-align: center;">Sample of some data for logistic regression</figcaption></strong> </span>
 								<p>In order to read and process this data, an Amazon EMR cluster was created with Spark as the Application and connected with 'hadoop' as the User name. I wrote <strong><em><a href="https://github.com/jonzhao1/state-crime-model/blob/main/state_crime_lr_model.py">code using PySpark</a></em></strong>, the Python package for Spark programming, for the model. These are the main steps the code takes:
 								<ol>
-                                    <li>PySpark reads the CSV dataset in the Amazon S3 bucket and creates a Spark DataFrame from it</li>
-                                    <li>Columns are created to measure crime: crime per 100,000 people for each year and state, national average number of crimes per 100,000 people for every year, and a column to create a label for the logistic regression model to work, whether the crime per 100,000 people for that state in that year is greater than the average national crime for that year</li>
-                                    <li>Feature Engineering was done for the state column: it was encoded and put in a VectorAssembler along with the Age, Population, and Income</li>
-									<li>A pipeline was created to standardize the data by applying the same transformations to the data at each step</li>
-									<li>The dataset was split where 70% became the training set and 30% became the test set for the logistic regression model</li>
-									<li>The Area Under the Curve (AUC) was used to evaluate the models. Steps to ensure the best model was picked included using a 3-Fold Validation and exploring the Hyperparameters (Grid Search) to see which model had the highest AUC</li>
-									<li>The best model was tested on the testing set</li>
+                                    <li>PySpark reads the CSV dataset in the Amazon S3 bucket and creates a Spark DataFrame from it.</li>
+                                    <li>Columns are created to measure crime: crime per 100,000 people for each year and state, national average number of crimes per 100,000 people for every year, and a column to create a label for the logistic regression model to work, whether the crime per 100,000 people for that state in that year is greater than the average national crime for that year.</li>
+                                    <li>Feature Engineering was done for the state column: it was encoded and put in a VectorAssembler along with the Age, Population, and Income.</li>
+									<li>A pipeline was created to standardize the data by applying the same transformations to the data at each step.</li>
+									<li>The dataset was split where 70% became the training set and 30% became the test set for the logistic regression model.</li>
+									<li>The Area Under the Curve (AUC) was used to evaluate the models. Steps to ensure the best model was picked included using a 3-Fold Validation and exploring the Hyperparameters (Grid Search) to see which model had the highest AUC.</li>
+									<li>The best model was tested on the testing set.</li>
                                 </ol>
 								</p> 
 							</article>
@@ -391,7 +388,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Jonathan Zhao Crime Model | Design: <a href="https://html5up.net">HTML5 UP</a></p>
+						<p class="copyright">&copy; 2023 Jonathan Zhao</p>
+						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a></p>
 					</footer>
 
 			</div>
