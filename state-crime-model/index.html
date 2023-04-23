@@ -54,7 +54,7 @@
 						<!-- Dataset -->
 							<article id="dataset">
 								<h2 class="major">Dataset</h2>
-								<span class="image main"><img src="images/original_dataset_sample.png" alt="" /> <strong><figcaption style="text-align: center;">Sample of dataset from the API</figcaption></strong> </span>
+								<span class="image main"><img src="images/original_dataset_sample.png" alt="" width="100" height="250" /> <strong><figcaption style="text-align: center;">Sample of dataset from the API</figcaption></strong></span>
 								<span class="image main"><img src="images/dataset_sample.png" alt="" /> <strong><figcaption style="text-align: center;">Sample of transformed dataset</figcaption></strong> </span>
 								<p>I wrote <strong><em><a href="https://github.com/jonzhao1/state-crime-model/blob/main/state_crime_dataset.ipynb">code to collect data</a></em></strong> from the Data Commons Python API. The resulting dataset needed to be transformed so that the columns could be used for a model, where every record is a yearly observation for a given state. A new column for state abbreviations was added, which will be used to create visualizations of choropleth maps of U.S. states.</p>				 
 								<p>Next, I connected to an Amazon EC2 instance and configured the AWS CLI. An Amazon S3 bucket was created and the code used to collect and transform the data from the API was run. The dataset was then placed in an Amazon S3 bucket.</p>
@@ -63,8 +63,8 @@
 						<!-- EDA -->
 							<article id="eda">
 								<h2 class="major">EDA</h2>
-								<span class="image main"><img src="images/dc_stats_1.png" alt="" /></span>
-								<span class="image main"><img src="images/dc_stats_2.png" alt="" /> <strong><figcaption style="text-align: center;">Exploring the data</figcaption></strong> </span>
+								<span class="image main"><img src="images/dc_stats_1.png" alt="" width="100" height="400" /></span>
+								<span class="image main"><img src="images/dc_stats_2.png" alt="" width="100" height="100" /> <strong><figcaption style="text-align: center;">Exploring the data</figcaption></strong></span>
 								<p>The dataset in the Amazon S3 bucket is loaded for <strong><em><a href="https://github.com/jonzhao1/state-crime-model/blob/main/eda_s3_bucket.py">exploratory data analysis</a></em></strong> using Python. The number of rows and columns, column names, data types of each column, number of missing values in each column, and descriptive statistics like mean and max for all the columns were found.</p> 
 								<p>In the dataset, each row is a specific year and gives information for a state in the United States for the total population, median income of a person, median age of a person, and total count of crimes. The data spans a total of 9 years, starting from 2011 to 2019. Furthermore, there is data for all 50 states. There are no missing values.</p>
 								<p>From this analysis, I concluded that the dataset should be sufficient in predicting crime rates based on the relationship between median income and median age.</p>
@@ -137,7 +137,11 @@
 								</p>
 								<p><h3>Next Steps</h3>
 								In the future, I would like to investigate deeper into the counties, cities, and zip codes within these states to learn more about crime rates and what features help predict it. Since there would be more data to collect and process, it would allow using an engine for large-scale data processing like Spark and a cloud computing service like AWS to be used as intended.
-								In addition, I would like to use different software to create data visualizations. A <strong>business intelligence tool such as Tableau</strong> can connect to multiple data sources like a database or CSV file at the same time and use them all to build visualizations by data blending. I could build the same visualizations and more with its simple drag and drop functionality. Afterwards, assembling all the visualizations into a dashboard and presenting these insights would be effective in telling the story to the viewer.
+								In addition, I would like to use different software to create data visualizations. A <strong>business intelligence tool such as Tableau</strong> can connect to multiple data sources like a database or CSV file at the same time and use them all to build visualizations by blending the data. I could build the same visualizations and more with its simple drag and drop functionality. Afterwards, assembling all the visualizations into a <strong>dashboard</strong> and presenting these insights would be effective in telling the story to the viewer.
+								</p>
+								<p><h3>Updates - 4/22/2023</h3>
+								<strong>I collected more data through the Data Commons Python API</strong> for the count of different types of crimes (aggravated assault, robberies, larceny theft, etc.). After, I created a <strong>Tableau dashboard</strong> to further analyze these crimes and the factors that play into why they occurred. I drilled down on those specific crimes, calculated new KPIs, grouped states by regions, and more into interactive visualizations.</p>
+								<p>Check out the Tableau dashboard <strong><em><a href="https://public.tableau.com/app/profile/jonathan.zhao4311/viz/CrimeintheU_S_from2011to2019/CrimeinU_S_">here</a></em></strong>!    
 								</p>
 							</article>
 
